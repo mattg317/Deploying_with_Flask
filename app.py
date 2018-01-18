@@ -7,15 +7,8 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
 # Grab connection URL from local environment variables
-# connection_var = os.environ.get("mysql_connection")
-# engine = create_engine(connection_var)
-
-# Uses local config file
-from config import connection
-connection_string = connection["mysql_connection"]
-print(connection_string)
-engine = create_engine(connection_string)
-
+connection_var = os.environ.get("mysql_connection")
+engine = create_engine(connection_var)
 
 # reflect an existing database into a new model
 Base = automap_base()
