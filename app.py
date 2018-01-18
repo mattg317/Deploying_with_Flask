@@ -29,7 +29,7 @@ app = Flask(__name__)
 def welcome():
     """List all available api routes."""
     print("Retrieving homepage")
-    return "Welcome to my hompage"
+    return "Welcome to my homepage"
 
 @app.route("/api/justice_league")
 def all_justice():

@@ -2,7 +2,9 @@
 
 1. Create Repo
 
-2. Add requirements.txt and make sure it includes:
+2. Write Python code in `app.py`. **Note** this can be named anything you want, just make to adjust the Procfile accordingly if another name is used.
+
+3. Add requirements.txt and make sure it includes:
 
   * gunicorn
   * mysqlclient
@@ -10,11 +12,11 @@
   * flask
   * numpy
 
-3. Add Procfile
+4. Add Procfile
 
   * include `web: gunicorn app:app'
 
-4. Go to (heroku)[https://www.heroku.com/].
+5. Go to (heroku)[https://www.heroku.com/].
 
   * Create a new app
   * From the **Deploy** tab, scroll down and link Github.
@@ -29,9 +31,7 @@ import os
 connection_var = os.environ.get("mysql_connection")
 engine = create_engine(connection_var)
 ```
-2. Back on Heroku go to settings  and click **Reveal Config Vars**.
+2. Back on Heroku, navigate to settings tab, scroll down and click **Reveal Config Vars**.
 
-3. Add the the variable string you made in step (so in this case `mysql_connection`) to the field on the left, and the your connect string to the field on the right. *Note* be sure no to add quotations.
-
-4. Re-deploy app.
+3. Add the variable string used in step 1 (so in this case `mysql_connection`) to the field on the left, and the connection string to the field on the right. *Note* be sure not to add quotations.
 
