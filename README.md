@@ -2,7 +2,7 @@
 
 1. Create Repo
 
-2. Write Python code in `app.py`. **Note** this can be named anything you want, just make to adjust the Procfile accordingly if another name is used.
+2. Write Python code in `app.py`. **Note** this can be named anything you want, just make sure to adjust the Procfile accordingly if another name is used.
 
 3. Add requirements.txt and make sure it includes:
 
@@ -12,9 +12,9 @@
   * flask
   * numpy
 
-4. Add Procfile
+4. Add `Procfile`
 
-  * include `web: gunicorn app:app'
+  * Inside  `web: gunicorn app:app` inside the Procfile.
 
 5. Go to (heroku)[https://www.heroku.com/].
 
